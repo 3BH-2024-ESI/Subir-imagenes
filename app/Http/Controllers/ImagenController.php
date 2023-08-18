@@ -18,7 +18,7 @@ class ImagenController extends Controller
         $mimeType = $file->getMimeType();
 
     
-        $fileName = Str::random(50) . ".png";
+        $fileName = Str::random(50) . "." . $fileExtension;
         $destinationPath = 'imagenes';
         $file->move($destinationPath,$fileName);
 
